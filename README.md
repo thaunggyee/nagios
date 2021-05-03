@@ -46,17 +46,17 @@ h2. Testing your local host's ssh service with Nagios Core
 
 h2. Testing NCPA active check with Nagios Core
 
-#  First download the https://raw.githubusercontent.com/NagiosEnterprises/ncpa/master/client/check_ncpa.py and place in this location /usr/local/nagios/libexec 
-    If you don't want to download it , you can create py file and copy it.
-#  You need to create check_ncpa command for nagios core and location is /usr/local/nagios/etc/objects. Add the following command in commands.cfg which is under /usr/local/nagios/etc/objects.
+* First download the https://raw.githubusercontent.com/NagiosEnterprises/ncpa/master/client/check_ncpa.py and place in this location /usr/local/nagios/libexec 
+* If you don't want to download it , you can create py file and copy it.
+* You need to create check_ncpa command for nagios core and location is /usr/local/nagios/etc/objects. Add the following command in commands.cfg which is under /usr/local/nagios/etc/objects.
 <pre>
 define command {
  command_name    check_ncpa
  command_line    $USER1$/check_ncpa.py -H $HOSTADDRESS$ $ARG1$
 }
 </pre>
-#  You need to create config file called ncpa.cfg under this location /usr/local/nagios/etc/servers and copy all of the command in the attachment config.odt .
-#  You need to edit 2 things : address in "define host" section and mytoken which is your own token  in every sections.  
+*  You need to create config file called ncpa.cfg under this location /usr/local/nagios/etc/servers and copy all of the command in the attachment config.odt .
+*  You need to edit 2 things : address in "define host" section and mytoken which is your own token  in every sections.  
 
 h2. Adding one more server's NCPA active check with Nagios Core
 
@@ -120,8 +120,9 @@ $ echo "Test Postfix Gmail Relay" | mail -s "Postfix Gmail" receivergmailaddress
 * Update the gmail address that you want to receive notification mail from Nagios in Nagios's contacts.cfg (/usr/local/nagios/etc/objects/contacts.cfg)
 * And restart the nagios service
 * If you don't understand the above steps, please check this following links
+<pre>
 https://www.golinuxcloud.com/gmail-smtp-relay-server-postfix/
 https://virtuallylg.wordpress.com/2020/02/10/configure-nagios-4-4-5-email-notification-using-gmail/
-
+</pre>
 
 
