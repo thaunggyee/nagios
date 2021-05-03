@@ -1,23 +1,21 @@
-# nagios
 
-h1. Nagios 
 
 h2. Nagios Products
-
+<pre>
 * Nagios XI
 * Nagios Core
 * Nagios Fusion
 * Nagios Log Server
 * Nagios Network Analyzer 
-
+</pre>
 * Among them, Nagios Core is the only free available tool.
 
 h2. Nagios Core Installation and Configuration
-
+<pre>
 * Please check the attachment file to install and configure nagios.
 * If nagios download link does not work,please download it from this link https://sourceforge.net/projects/nagios/
 * Enjoy nagios with your local host's services. 
-
+</pre>
 h2. Testing your local host's ssh service with Nagios Core
 
 * If you don't have ssh server, please install it with following command
